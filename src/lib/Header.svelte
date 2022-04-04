@@ -1,11 +1,12 @@
 <script>
     import Navigation from "./Navigation.svelte";
+    import logoUrl from '/src/assets/logo/Icon White.svg'
 </script>
 
 <header>
     <Navigation />
     <div class="content">
-        <img class="logo" src="/src/assets/logo/Icon White.svg" alt="" />
+        <img class="logo" src={logoUrl} alt="" />
         <h1>Het Mediationhuis</h1>
     </div>
     <div class="scroll">

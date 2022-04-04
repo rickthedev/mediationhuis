@@ -1,12 +1,13 @@
 <script>
     import Container from "./Container.svelte";
+    import logoUrl from '/src/assets/logo/Icon White.svg'
 </script>
 
 <nav>
     <Container>
         <ul>
             <li>
-                <a href=""><img class="logo" src="/src/assets/logo/Icon White.svg" alt="" /></a>
+                <a href=""><img class="logo" src={logoUrl} alt="" /></a>
             </li>
             <li><a href="">mediation</a></li>
             <li><a href="">vertrouwenspersoon</a></li>
