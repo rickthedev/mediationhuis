@@ -1,16 +1,18 @@
 <script>
     import Navigation from "./Navigation.svelte";
-    import logoUrl from '/src/assets/logo/Icon White.svg'
+
+    import logo from '/src/assets/logo/Icon White.svg'
+    import mouseIcon from '/src/assets/logo/Icon White.svg'
 </script>
 
 <header>
     <Navigation />
     <div class="content">
-        <img class="logo" src={logoUrl} alt="" />
+        <img class="logo" src={logo} alt="" />
         <h1>Het Mediationhuis</h1>
     </div>
     <div class="scroll">
-        <img class="mouse" src="/src/assets/iconmonstr-mouse-6.svg" alt="">
+        <img class="mouse" src={mouseIcon} alt="">
         <p>scroll omlaag</p>
     </div>
 </header>
