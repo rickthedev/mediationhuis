@@ -2,7 +2,7 @@
     import Navigation from "./Navigation.svelte";
 
     import logo from '/src/assets/logo/Icon White.svg'
-    import mouseIcon from '/src/assets/logo/Icon White.svg'
+    import mouseIcon from '/src/assets/iconmonstr-mouse-6.svg'
 </script>
 
 <header>
