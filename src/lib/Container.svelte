@@ -1,0 +1,39 @@
+<div class="container"><slot /></div>
+
+<style>
+    
+    @media screen and (max-width: 576px) {
+        .container {
+            width: 100%;
+        }
+    }
+    @media screen and (min-width: 576px) {
+        .container {
+            width: 540px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .container {
+            width: 720px;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .container {
+            width: 960px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        .container {
+            width: 1140px;
+        }
+    }
+    @media screen and (min-width: 1400px) {
+        .container {
+            width: 1320px;
+        }
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+</style>
