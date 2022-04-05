@@ -1,11 +1,15 @@
 <script>
     import Container from "./Container.svelte";
+
+    import huis from '/src/assets/huis.jpeg'
 </script>
 
 <section class="locatie" id="locatie">
     <div class="background">
         <div class="left" />
-        <div class="right" />
+        <div class="right">
+            <img src={huis} alt="">
+        </div>
     </div>
     <Container>
         <div class="content">
@@ -52,8 +56,19 @@
     }
 
     .right {
-        background-image: url("/src/assets/huis.jpeg");
+        /* background-image: url("/src/assets/huis.jpeg");
         background-position: center;
-        background-size: cover;
+        background-size: cover; */
+
+        position: relative;
+    }
+
+    .right img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        object-fit: cover;
+        object-position: center;
     }
 </style>
