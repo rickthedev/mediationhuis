@@ -3,6 +3,7 @@
 
     import Navigation from "./Navigation.svelte";
 
+    import backgroundImage from '/src/assets/backimage.png'
     import logo from '/src/assets/logo/Icon White.svg'
     import mouseIcon from '/src/assets/iconmonstr-mouse-6.svg'
 
@@ -20,7 +21,7 @@
 </script>
 
 <header>
-    <img src="/src/assets/backimage.png" alt="" class="background">
+    <img src={backgroundImage} alt="" class="background">
     <Navigation />
     <div class="content">
         <img class="logo" src={logo} alt="" />
