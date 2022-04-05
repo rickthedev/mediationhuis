@@ -1,9 +1,11 @@
 <script>
   import Header from "./lib/Header.svelte";
+import Test from "./lib/test.svelte";
 </script>
 
 <main>
   <Header></Header>
+  <Test></Test>
 </main>
 
 <style>
@@ -28,5 +30,9 @@
   :global(h1, h2, h3, h4, h5, h6) {
     font-family: "Swear Display";
     font-weight: bold;
+  }
+
+  main {
+    overflow-x: hidden;
   }
 </style>

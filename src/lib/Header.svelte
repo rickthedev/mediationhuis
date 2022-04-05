@@ -1,17 +1,32 @@
 <script>
+    import { onMount } from "svelte";
+
     import Navigation from "./Navigation.svelte";
 
     import logo from '/src/assets/logo/Icon White.svg'
     import mouseIcon from '/src/assets/iconmonstr-mouse-6.svg'
+
+    let scrollIndicator;
+    
+    onMount(() => {
+        window.onscroll = () => {
+            if (window.scrollY > 0) {
+                scrollIndicator.style.opacity = "0"
+            } else {
+                scrollIndicator.style.opacity = "1"
+            }
+        }
+    })
 </script>
 
 <header>
+    <img src="/src/assets/backimage.png" alt="" class="background">
     <Navigation />
     <div class="content">
         <img class="logo" src={logo} alt="" />
         <h1>Het Mediationhuis</h1>
     </div>
-    <div class="scroll">
+    <div class="scroll" bind:this={scrollIndicator}>
         <img class="mouse" src={mouseIcon} alt="">
         <p>scroll omlaag</p>
     </div>
@@ -24,18 +39,25 @@
         height: 100vh;
         width: 100vw;
 
-        background-image: url("/src/assets/backimage.png");
-        background-position: center;
-        background-size: cover;
-
-        animation-name: zoom;
-        animation-duration: 10s;
-        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        overflow: hidden;
+    }
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        z-index: -10;
+
+        animation-name: zoom;
+        animation-duration: 10s;
     }
 
     .content {
@@ -68,6 +90,8 @@
         bottom: 0;
 
         margin-bottom: 2rem;
+
+        transition: .3s;
     }
 
     .scroll p {
@@ -107,10 +131,10 @@
 
     @keyframes zoom {
         from {
-            background-size: 125vw;
+            transform: scale(1.25);
         }
         to {
-            background-size: 100vw;
+            transform: scale(1);
         }
     }
 </style>
