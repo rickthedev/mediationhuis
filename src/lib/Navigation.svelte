@@ -7,11 +7,11 @@
     <Container>
         <ul>
             <li>
-                <a href=""><img class="logo" src={logo} alt="" /></a>
+                <a href="#header"><img class="logo" src={logo} alt="" /></a>
             </li>
-            <li><a href="">mediation</a></li>
-            <li><a href="">vertrouwenspersoon</a></li>
-            <li><a href="">contact</a></li>
+            <li><a href="#mediation">mediation</a></li>
+            <li><a href="#vertrouwenspersoon">vertrouwenspersoon</a></li>
+            <li><a href="#contact">contact</a></li>
         </ul>
     </Container>
 </nav>

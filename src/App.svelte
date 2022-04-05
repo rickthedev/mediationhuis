@@ -1,17 +1,31 @@
 <script>
+  import Contact from "./lib/Contact.svelte";
+  import Footer from "./lib/Footer.svelte";
   import Header from "./lib/Header.svelte";
-import Test from "./lib/test.svelte";
+  import Mediation from "./lib/Mediation.svelte";
 </script>
 
 <main>
-  <Header></Header>
-  <Test></Test>
+  <Header />
+  <Mediation />
+  <Contact />
+  <Footer />
 </main>
 
 <style>
   :global(*) {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    font-family: "Swear Text";
+  }
+
+  :global(h1, h2, h3, h4, h5, h6) {
+    font-family: "Swear Display";
+    font-weight: bold;
   }
 
   :global(ul) {
@@ -23,13 +37,14 @@ import Test from "./lib/test.svelte";
     color: inherit;
   }
 
-  :global(html) {
-    font-family: "Swear Text";
+  :global(h2) {
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
 
-  :global(h1, h2, h3, h4, h5, h6) {
-    font-family: "Swear Display";
-    font-weight: bold;
+  :global(h3) {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
 
   main {

@@ -1,0 +1,88 @@
+<script>
+    import { onMount } from "svelte";
+
+    import Container from "./Container.svelte";
+    import IntersectionObserver from "./IntersectionObserver.svelte";
+
+    import trusted from "/src/assets/icons/001-trusted.png";
+    import negotiation from "/src/assets/icons/002-negociation.png";
+    import friends from "/src/assets/icons/003-friends.png";
+</script>
+
+<section id="mediation" class="mediation">
+    <Container>
+        <h2>Mediation</h2>
+
+        <div class="triple">
+            <IntersectionObserver transitionDelay={0}>
+                <div class="element">
+                    <img src={trusted} alt="" />
+                    <h3>Gecertificeerd</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequuntur pariatur
+                        nesciunt tempore repellendus deserunt mollitia animi amet, sed accusantium.
+                    </p>
+                </div>
+            </IntersectionObserver>
+
+            <IntersectionObserver transitionDelay={0.1}>
+                <div class="element">
+                    <img src={negotiation} alt="" />
+                    <h3>In Gesprek</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut laboriosam hic neque, ipsum numquam
+                        adipisci maxime dolorem aliquid aut id vitae excepturi, architecto cumque delectus sapiente cum
+                        recusandae vero! Beatae!
+                    </p>
+                </div>
+            </IntersectionObserver>
+
+            <IntersectionObserver transitionDelay={0.2}>
+                <div class="element">
+                    <img src={friends} alt="" />
+                    <h3>Vriendelijk</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, molestiae?</p>
+                </div>
+            </IntersectionObserver>
+        </div>
+    </Container>
+</section>
+
+<style>
+    .mediation {
+        padding: 2rem 0;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, .0)), url("https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+        background-size: cover;
+        background-position: center;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .triple {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .element {
+        height: 100%;
+
+        text-align: justify;
+        text-align-last: center;
+        hyphens: auto;
+
+        background-color: white;
+
+        box-shadow: 3px 3px 36px rgba(0, 0, 0, 0.1);
+        border-radius: 0.2rem;
+        padding: 2rem;
+    }
+
+    .element img {
+        width: 4rem;
+        margin-bottom: 1rem;
+    }
+</style>
