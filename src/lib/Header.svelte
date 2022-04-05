@@ -3,32 +3,37 @@
 
     import Navigation from "./Navigation.svelte";
 
-    import backgroundImage from '/src/assets/backimage.png'
-    import logo from '/src/assets/logo/Icon White.svg'
-    import mouseIcon from '/src/assets/iconmonstr-mouse-6.svg'
+    import backgroundImage from "/src/assets/backimage.png";
+    import logo from "/src/assets/logo/Icon White.svg";
+    import mouseIcon from "/src/assets/iconmonstr-mouse-6.svg";
 
     let scrollIndicator;
-    
+
     onMount(() => {
         window.onscroll = () => {
             if (window.scrollY > 0) {
-                scrollIndicator.style.opacity = "0"
+                scrollIndicator.style.opacity = "0";
             } else {
-                scrollIndicator.style.opacity = "1"
+                scrollIndicator.style.opacity = "1";
             }
-        }
-    })
+        };
+    });
 </script>
 
 <header>
-    <img src={backgroundImage} alt="" class="background">
+    <!-- <img src={backgroundImage} alt="" class="background"> -->
+    <img
+        src="https://images.unsplash.com/photo-1453888768187-1e6746aba265?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80"
+        alt=""
+        class="background"
+    />
     <Navigation />
     <div class="content">
         <img class="logo" src={logo} alt="" />
         <h1>Het Mediationhuis</h1>
     </div>
     <div class="scroll" bind:this={scrollIndicator}>
-        <img class="mouse" src={mouseIcon} alt="">
+        <img class="mouse" src={mouseIcon} alt="" />
         <p>scroll omlaag</p>
     </div>
 </header>
@@ -59,6 +64,8 @@
 
         animation-name: zoom;
         animation-duration: 10s;
+
+        filter: brightness(.25);
     }
 
     .content {
@@ -92,7 +99,7 @@
 
         margin-bottom: 2rem;
 
-        transition: .3s;
+        transition: 0.3s;
     }
 
     .scroll p {

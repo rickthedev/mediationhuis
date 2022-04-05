@@ -22,7 +22,7 @@
     onMount(() => {
         observer.observe(element);
         element.style.opacity = "0";
-        element.style.transition = ".5s";
+        element.style.transition = ".75s";
         element.style.transitionDelay = `${transitionDelay}s`
     });
 </script>

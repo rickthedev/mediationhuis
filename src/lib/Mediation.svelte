@@ -51,13 +51,13 @@
 <style>
     .mediation {
         padding: 2rem 0;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255, .0)), url("https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+        padding-bottom: 3rem;
+        background-image: url("/src/assets/annie-spratt-hX_hf2lPpUU-unsplash(1).jpg");
         background-size: cover;
         background-position: center;
     }
 
     h2 {
-        text-align: center;
         margin-bottom: 2rem;
     }
 

@@ -16,7 +16,7 @@
 
 <style>
     .contact {
-        padding: 3rem 0;
+        margin: 2rem 0;
     }
 
     .button {
