@@ -5,15 +5,13 @@
   import Locatie from "./lib/Locatie.svelte";
   import Mediation from "./lib/Mediation.svelte";
   import Vertrouwenspersoon from "./lib/Vertrouwenspersoon.svelte";
-
-  
 </script>
 
 <main>
   <Header />
   <Mediation />
   <Vertrouwenspersoon />
-  <Locatie />
+  <!-- <Locatie /> -->
   <Contact />
   <Footer />
 </main>

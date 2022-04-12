@@ -4,7 +4,7 @@
     
     @media screen and (max-width: 576px) {
         .container {
-            width: 100%;
+            width: 90%;
         }
     }
     @media screen and (min-width: 576px) {

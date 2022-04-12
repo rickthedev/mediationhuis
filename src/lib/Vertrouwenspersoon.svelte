@@ -7,7 +7,7 @@
     <Container>
         <h2>Vertrouwenspersoon</h2>
 
-        <div class="half">
+        <div class="narrow">
             <IntersectionObserver>
                 <div class="persoon">
                     <div class="photoContainer">
@@ -25,19 +25,26 @@
             </IntersectionObserver>
 
             <div class="info">
-                <h3>Lorem, ipsum dolor.</h3>
+                <h3>Ongewenst gedrag</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita mollitia quae inventore laboriosam
-                    quaerat aliquid nostrum, recusandae possimus enim, debitis quos beatae veniam. Autem, obcaecati
-                    veniam? Possimus consequatur ab beatae!
+                    Waar mensen werken kunnen ongewenste omgangsvormen ontstaan. Meer dan 1,2 miljoen mensen hebben hier
+                    last van. Het gaat dan bijvoorbeeld om: (sexuele) intimidatie, agressie en geweld, pesten,
+                    discriminatie of anderen vormen.
                 </p>
 
-                <h3>Lorem ipsum dolor sit.</h3>
+                <h3>Gevolgen</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda labore voluptatem officia
-                    repellendus sit consectetur voluptatibus aspernatur explicabo iure quas, ad earum minus deleniti
-                    distinctio possimus illum harum quisquam optio, magnam ab excepturi. Assumenda similique, ea porro
-                    culpa doloremque suscipit molestiae ipsa ex iusto sit quibusdam expedita dolor possimus natus?
+                    Gevolgen werknemers zijn stress (PTSS), psychische schade, uitval en demotivatie. Gevolgen
+                    werkgevers zijn het risico op reputatieschade en mogelijk grote financiele gevolgen
+                </p>
+
+                <h3>Vertrouwenspersoon</h3>
+                <p>
+                    De vertrouwenspersoon kan een cruciale rol spelen bij uw rol als goed werkgever. Zij biedt opvang en
+                    begeleiding, Helpt met voorlichten, informeren en inspireren van de medewerkers en de organisatie.
+                    Levert gevraagd en ongevraagd advies aan bestuur, directie en/of management. Biedt hulp bij
+                    evaluatie en opzetten van beleid. Het huis van Vertrouwenspersonen is er om u te ondersteunen en
+                    helpt u en uw medewerkers.
                 </p>
             </div>
         </div>
@@ -52,21 +59,26 @@
         background-size: cover;
 
         padding: 2rem 0;
-        padding-bottom: 3rem;
 
         color: white;
     }
 
-    .half {
-        width: 50%;
+    .narrow {
+        width: 720px;
         margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        .narrow {
+            width: 100%;
+        }
     }
 
     .persoon {
         margin-bottom: 2rem;
 
         padding: 0rem 2rem 2rem 2rem;
-        margin-top: 7.5rem;
+        margin-top: 8.5rem;
 
         display: flex;
         flex-direction: column;

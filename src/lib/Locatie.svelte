@@ -1,7 +1,7 @@
 <script>
     import Container from "./Container.svelte";
 
-    import huis from '/src/assets/huis.jpeg'
+    import huis from "/src/assets/huis.jpeg";
 </script>
 
 <section class="locatie" id="locatie">
