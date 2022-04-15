@@ -53,8 +53,7 @@
 
 <style>
     .vertrouwenspersoon {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-            url("/src/assets/photo-1582139329536-e7284fece509.avif");
+        background-image: url("/src/assets/safe.png");
         background-position: center;
         background-size: cover;
 
