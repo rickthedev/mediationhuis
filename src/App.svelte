@@ -46,6 +46,12 @@
     margin-bottom: 1rem;
   }
 
+  @media screen and (max-width: 768px) {
+    :global(h2) {
+      font-size: 2rem;
+    }
+  }
+
   :global(h3) {
     font-size: 2rem;
     margin-bottom: 0.5rem;

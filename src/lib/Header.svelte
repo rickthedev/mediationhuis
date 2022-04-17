@@ -1,13 +1,15 @@
 <script>
     import { onMount } from "svelte";
+    import { fade } from "svelte/transition";
 
     import Navigation from "./Navigation.svelte";
 
-    import backgroundImage from "/src/assets/backimage.png";
     import logo from "/src/assets/logo/Icon White.svg";
     import mouseIcon from "/src/assets/iconmonstr-mouse-6.svg";
 
     let scrollIndicator;
+
+    let mediationhuisVisible;
 
     onMount(() => {
         window.onscroll = () => {
@@ -18,10 +20,16 @@
             }
         };
     });
+
+    mediationhuisVisible = true;
+
+    setInterval(() => {
+        mediationhuisVisible = !mediationhuisVisible
+    }, 5000);
+
 </script>
 
 <header>
-    <!-- <img src={backgroundImage} alt="" class="background"> -->
     <img
         src="https://images.unsplash.com/photo-1453888768187-1e6746aba265?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80"
         alt=""
@@ -30,7 +38,11 @@
     <Navigation />
     <div class="content">
         <img class="logo" src={logo} alt="" />
-        <h1>Het Mediationhuis</h1>
+        {#if mediationhuisVisible}
+            <h1 in:fade="{{duration: 1000}}">Het Mediationhuis</h1>
+        {:else}
+            <h1 in:fade="{{duration: 1000}}">Het Huis van Vertrouwenspersonen</h1>
+        {/if}
     </div>
     <div class="scroll" bind:this={scrollIndicator}>
         <img class="mouse" src={mouseIcon} alt="" />
@@ -65,7 +77,7 @@
         animation-name: zoom;
         animation-duration: 10s;
 
-        filter: brightness(.25);
+        filter: brightness(0.25);
     }
 
     .content {
@@ -82,11 +94,43 @@
         margin-bottom: 2rem;
     }
 
+    @media screen and (max-width: 768px) {
+        .logo {
+            width: 8rem;
+        }
+    }
+
     h1 {
         color: white;
-        font-size: 5rem;
+        font-size: 4rem;
 
         user-select: none;
+
+        text-align: center;
+    }
+
+    @media screen and (max-width: 1200px) {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        h1 {
+            font-size: 1.5rem;
+        }
     }
 
     .scroll {

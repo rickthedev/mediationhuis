@@ -25,4 +25,12 @@
         display: flex;
         justify-content: space-between;
     }
+
+    @media screen and (max-width: 768px) {
+        .flex {
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+    }
 </style>

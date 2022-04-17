@@ -102,6 +102,14 @@
         margin-bottom: 2rem;
     }
 
+    @media screen and (max-width: 768px) {
+        .photoContainer {
+            margin-top: -5rem;
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
     .photoContainer img {
         width: 100%;
         height: 100%;

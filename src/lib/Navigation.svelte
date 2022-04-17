@@ -4,7 +4,6 @@
 </script>
 
 <nav>
-    <Container>
         <ul>
             <li>
                 <a href="#header"><img class="logo" src={logo} alt="" /></a>
@@ -13,7 +12,6 @@
             <li><a href="#vertrouwenspersoon">vertrouwenspersoon</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
-    </Container>
 </nav>
 
 <style>
@@ -22,6 +20,12 @@
         top: 0;
         left: 0;
         right: 0;
+    }
+
+    @media screen and (max-width: 567px) {
+        nav {
+            display: none;
+        }
     }
 
     ul {
@@ -33,6 +37,12 @@
 
     li:not(:first-child) {
         margin-left: 3rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        li:not(:first-child) {
+            margin-left: 2rem;
+        }
     }
 
     li:first-child {
